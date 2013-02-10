@@ -1,0 +1,168 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Mercury - Inbox</title>
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+<link href="css/dm.css" rel="stylesheet" type="text/css" media="all" />
+<!--[if IE 7]>
+<link href="css/ie7.css" rel="stylesheet" type="text/css" media="all" />
+<![endif]-->
+<!--[if IE 8]>
+<link href="css/ie8.css" rel="stylesheet" type="text/css" media="all" />
+<![endif]-->
+<link rel="stylesheet" href="css/jquery-ui.css" />
+<script type="text/javascript" src="js/jquery-1.8.2.js"></script>
+<script type="text/javascript" src="js/jquery-ui.js"></script>
+<script type="text/javascript" src="js/jquery.nicescroll.js"></script>
+<script type="text/javascript" src="js/waypoints.min.js"></script>
+<script type="text/javascript" src="js/jquery.scroll.events.js"></script>
+<script type="text/javascript" src="js/jquery.simpletip-1.3.1.pack.js"></script>
+<script type="text/javascript" src="js/jquery-ui-timepicker-addon.js?sdfg5"></script>
+<script type="text/javascript" src="js/functions.js"></script>
+<script type="text/javascript" src="js/excanvas.js"></script>
+<script type="text/javascript" src="js/jit.js" ></script>
+<script type="text/javascript" src="js/functions_dm.js"></script>
+
+<script type="text/javascript" src="js/example1.js"></script>
+
+
+</head>
+<body>
+<!-- start wrapper -->
+<div id="wrapper">
+	<div id="header">
+		<div id="logo"><a href="#"><img src="images/bg-logo.png" width="138" height="38" alt="Mercury" /></a></div>
+		<div id="top-section">
+			<p>Welcome, user</p>
+			<ul id="top-link">
+				<li><a href="#" id="logout"><img src="images/icon-logout_menu.png" alt="Admin Menu" width="16" height="16" />logout</a></li>
+				<li><a href="#" id="admin"><img src="images/icon-admin_menu.png" alt="Logout Menu" width="16" height="16" />settings</a></li>
+			</ul>			
+		</div>
+	</div>
+	<div id="buttons">
+		<div class="col-wrap">
+			<div class="col-left">&nbsp;</div>
+			<div class="col-middle" id="buttons-right">
+			</div>
+			<div class="col-right">
+				<ul class="buttons">
+					<li id="btn-address"><a href="#">Address Book</a><span>Address Book</span></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div id="content">
+		<div class="col-wrap">
+			<div class="col-left" id="mailbox">
+				<div id="mailbox-scroll">
+					<h2>Distribution Management</h2>
+					<ul id="message-icon" class="dm">
+						<li><a href="#"><img src="images/icon-dm_1.png" width="52" height="30" alt="DM View 1" /></a></li>
+						<li><a href="#"><img src="images/icon-dm_2.png" width="52" height="30" alt="DM View 2" /></a></li>
+					</ul>
+					<ul id="mailbox-list">
+						<li class="set">
+							<div><a href="#"><span class="icon"></span><strong>Set 1</strong></a></div>
+							<ul>
+								<li><a href="#" id="dm1">Unit = 1 RAR</a></li>
+								<li><a href="#" id="dm2">Unit = 2 RAR</a></li>
+								<li><a href="#" id="dm3">Unit = 3 RAR</a></li>
+							</ul>
+						</li>
+						<li class="set">
+							<div><a href="#"><span class="icon"></span><strong>Set 2</strong></a></div>
+							<ul>
+								<li><a href="#" id="dm4">Unit = 1 RAR</a></li>
+								<li><a href="#" id="dm5">Unit = 2 RAR</a></li>
+								<li><a href="#" id="dm6">Unit = 3 RAR</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+				<div id="left-menu-collapse"><a href="#"><img src="images/bg-left_menu_collapse.png" width="30" height="11" align="Close Menu" /></a></div>
+				<ul id="left-menu">
+					<li><a href="index.html">Mailboxes</a></li>
+					<li><a href="message_monitor.html">Message Monitor</a></li>
+					<li><a href="audit_trail.html">Audit Trail</a></li>
+					<li class="current"><a href="distribution_management.html">Distribution Management</a></li>
+					<li><a href="#">System Preferences</a></li>
+					<li><a href="#">User Management</a></li>
+					<li><a href="address_book_management.html">Address Book Management</a></li>
+				</ul>
+			</div>
+			<div class="col-right gradient" id="email-content" style="background-color:lime">
+					<div id="page-header">
+						<h3>1 RAR</h3>				
+					</div>
+				<div id="session-content" class="border" style="background-color:lih">					
+					<div class="content-wrap" style="background-color:green; background:green">
+					
+					<div id="graph" style="background-color:aqua">
+						<div id="infovis" style="background-color:maroon">
+						
+						<p>GRAPH HERE</p>
+						
+						</div>		
+					</div>
+				
+					<div id="rule-visualiser" class="tabs">
+					<ul>
+						<li><a href="#tabs-1">Select Message</a></li>
+						<li><a href="#tabs-2">Select Field</a></li>
+					</ul>
+					<div id="tabs-1">
+						<p>Proin elit arcu, rutrum commodo</p>
+						<div class="btn-wrap wide">
+							<ul>
+								<li><a href="#">Select Message</a></li>
+							</ul>
+						
+						</div>
+					  </div>
+					  <div id="tabs-2">
+						<p>Morbi tincidunt, dui sit amet facilisis feugiat.</p>
+						<ul id="select-field">
+							<li class="field">
+								<select>
+									<option value="Please select" selected="selected">Please select</option>
+									<option value="Precedence">Precedence</option>
+									<option value="SIC">SIC</option>
+									<option value="Unit 1">Unit 1</option>
+									<option value="Dolor sit amet">Dolor sit amet</option>
+									<option value="Consectetur ">Consectetur </option>
+									<option value="Adipiscing">Adipiscing</option>
+									<option value="Integer ">Integer </option>
+									<option value="Sed eros ">Sed eros </option>
+									<option value="Leo">Leo</option>
+									<option value="Id">Id</option>
+								</select>
+								<input type="text" class="txt" />
+								<div class="btn-add">
+									<a href="#" class="btn-plus">Plus</a>
+									<a href="#" class="btn-minus">Minus</a>
+								</div>
+							</li>						
+						</ul>
+						<div class="btn-wrap">
+							<ul>
+								<li><a href="#">Submit</a></li>
+								<li><a href="#">Clear</a></li>
+							</ul>
+						
+						</div>
+					  </div>					 					  
+					  </div>
+										
+					<br class="clear" />
+					</div>
+				</div>
+				<br class="clear" />
+			</div>
+		</div>
+	</div>
+</div>
+<!-- end wrapper -->
+</body>
+</html>

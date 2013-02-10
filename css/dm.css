@@ -1,0 +1,38 @@
+/**** DISTRIBUTION MANAGEMENT ****/
+
+/* Left Column */
+#mailbox #message-icon.dm {}
+#mailbox #message-icon.dm li {list-style:none; display:block; margin:0 5%; padding:0; float:left;  text-align:center; width:60px;}
+#mailbox #message-icon.dm li:first-child {margin-left:15%;}
+#mailbox #message-icon.dm li input[type="checkbox"] {position:absolute; right:0;}
+
+/* Middle Column */
+#graph {width:90%; border:1px solid #e4e4e4; background:#fff; margin:0 0 20px 0;}
+#graph > div {padding:20px;}
+#rule-visualiser {width:90%; margin:0 0 20px 0; background:none; border:none; border-radius:0; padding:0; font:12px/18px Arial, Helvetica, sans-serif!important;}
+#rule-visualiser * {font:12px/18px Arial, Helvetica, sans-serif;}
+#rule-visualiser .ui-tabs-nav {background:none; border:none; margin:0; padding:0;}
+#rule-visualiser .ui-tabs-nav li a {}
+#rule-visualiser .ui-tabs-panel {background:#fff; border:1px solid #e4e4e4; padding:10px;}
+#rule-visualiser .ui-tabs-panel p {margin:0 0 5px 0;}
+#rule-visualiser .ui-state-active,
+#rule-visualiser .ui-state-hover {background:#fff!important; border:1px solid #e4e4e4!important; border-bottom:1px solid #fff!important;}
+
+#select-field {margin:0;}
+#select-field li {list-style:none; padding:0 0 10px 0; overflow:hidden; position:relative;}
+#select-field li input,
+#select-field li select {float:left; margin:0 10px 0 0; width:210px; background: #FFFFFF; border: 1px solid #DCDCDC;padding: 5px 2px;}
+#select-field li select {padding:4px 2px;}
+#select-field li .btn-add {float:left;}
+#select-field li .btn-add a {display:block; float:left; background:url(../images/btn-plusminus.png) 0 0 no-repeat; width:17px; height:17px; text-indent:-9999px; margin:5px 5px 0 0;}
+#select-field li .btn-add a.btn-minus {background-position:0 -17px;}
+
+/* Style for nodes */
+#graph .node {background:#e7e7e8; padding:5px; width:100px; border-radius:20px; text-align:center; border:1px solid #e7e7e8 }
+#graph .node.wide {width:150px; border-radius:5px;}
+#graph .node p {margin:0;}
+#graph .node.action {background:#b6d2eb; border:1px solid #b6d2eb }
+#graph .node.info {background:#bcdc96; border:1px solid #bcdc96 }
+#graph .node.action.dotted {border:1px dashed #95a584;}
+#graph .node.info.dotted {border:1px dashed #8496a5;}
+#graph .node.infoaction {background:url(../images/bg-node_action_info.png) center center repeat-x; padding:6px; border:none;}
