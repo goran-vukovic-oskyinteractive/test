@@ -319,7 +319,9 @@ box-shadow: 0px 0px 3px 1px #c9c9c9; display:none;  }
 #email-list .date-bar h2 {text-transform:uppercase; font-family:'Conv_HelveticaNeueLTStd-Roman', Arial, Helvetica, sans-serif; font-size:12px; font-weight:normal; margin:0}
 #email-list .email {border-bottom:1px solid #dadada; padding:10px 0 10px 10px; overflow:hidden; background:#fff; cursor: pointer; position:relative;}
 #email-list .email:hover {background:#ccc url(../images/bg-email_hover.png);}
-#email-list .email.selected {background:url(../images/bg-email_selected.png)!important;}
+ /*#email-list .email.selected {background:url(../images/bg-email_selected.png)!important;} edited by Firdaus 11/02/2013 as requested by Goran */
+#email-list .email.selected {background:url(../images/bg-email_selected.png);}
+#email-list .email.selected:hover {background:url(../images/bg-email_selected_hover.png);}
 #email-list .email .email-icon {width:25px; float:left; min-height:50px; height:auto!important; height:50px;}
 #email-list .email .email-summary {float:left; width:80%; }
 #email-list .email .email-summary h3 {font-weight:normal; font-family: Arial, Helvetica, sans-serif; font-size:13px; margin:0 0 5px 0;}

@@ -15,6 +15,24 @@ public partial class Ajax : System.Web.UI.Page
 {
     public class Data
     {
+        int level = -1;
+
+        public Data(int level)
+        {
+            // TODO: Complete member initialization
+            Debug.WriteLine(level);
+            this.level = level;
+            if (level == 0 || level >= 4)
+                throw new ApplicationException("invalid node level");
+
+        }
+        public int l
+        {
+            get
+            {
+                return level;
+            }
+        }
         public string color
         {
             get
@@ -22,11 +40,19 @@ public partial class Ajax : System.Web.UI.Page
                 return "red";
             }
         }
+        public int alpha
+        {
+            get
+            {
+                return 1;
+            }
+        }
 
     }
     private class DistributionManagementNode
     {
         //Note: the notation is adjusted to AJAX, hence not corresponding to C# standard
+        private int level;
         protected string tagId;
         protected int nodeId;
         protected int parentId;
@@ -47,6 +73,13 @@ public partial class Ajax : System.Web.UI.Page
         public int GetParentId()
         {
             return parentId;
+        }
+        public void SetLevel(int level)
+        {
+            if (level == 0)
+                Debug.WriteLine("aaaaaa");
+            Debug.WriteLine(level);
+            this.level = level;
         }
         public string id
         {
@@ -76,7 +109,7 @@ public partial class Ajax : System.Web.UI.Page
         }
         public Data data
         {
-            get { return new Data(); }
+            get { return new Data(this.level); }
         }
     }
     private void BuildTree(IEnumerable<DistributionManagementNode> list, DistributionManagementNode parentNode)
@@ -85,6 +118,12 @@ public partial class Ajax : System.Web.UI.Page
         foreach (var node in nodes)
         {
             node.id = parentNode.id + "_" + node.GetId();
+            int level = node.id.Split('_').Length;
+            Debug.WriteLine(node.id);
+            Debug.WriteLine(level);
+            if (level == 0)
+                Debug.WriteLine("aaaaaa");
+            node.SetLevel(level);
             parentNode.children.Add(node);
             BuildTree(list, node);            
         }
@@ -103,7 +142,8 @@ public partial class Ajax : System.Web.UI.Page
         //list.Add(new DistributionManagementNode(3, "Bob", 1));
 
 
-        SqlConnection conn = new SqlConnection("Data Source=VT-OSKY-WIN2003;Initial Catalog=DB_52806_mercury;Integrated Security=True");
+        //SqlConnection conn = new SqlConnection("Data Source=VT-OSKY-WIN2003;Initial Catalog=DB_52806_mercury;Integrated Security=True");
+        SqlConnection conn = new SqlConnection("Data Source=VTSQL2008DEV;Initial Catalog=DB_52806_mercury;Integrated Security=True");
         try
         {
             conn.Open();
@@ -148,6 +188,7 @@ public partial class Ajax : System.Web.UI.Page
             rd.Close();
             DistributionManagementNode rootNode = list[0];
             rootNode.id = "dm" + rootId;
+            rootNode.SetLevel(1);
             BuildTree(list, rootNode);
             JavaScriptSerializer serializer = new JavaScriptSerializer();
             string json = serializer.Serialize(rootNode);

@@ -30,12 +30,10 @@ div#cover
  top:0;
  width:100%;
  height:100%;
-
+/* 
  background-color:gray;
- 
  zoom: 1;
-filter: alpha(opacity=20);
-opacity: 0.2;   
-
-
+filter: alpha(opacity=10);
+opacity: 0.1;   
+*/
 }
